@@ -1,0 +1,40 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+
+RewriteBase /masterIT-manager/
+RewriteCond %{ENV:REDIRECT_STATUS} !200
+RewriteRule (.*)\.php$ $1 [R=301,L,QSA,NC]
+
+
+# RewriteCond %{HTTPS} !=on
+#     RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{ENV:REDIRECT_STATUS} !200
+# RewriteRule (.*)\.php$ $1 [R=301,L,QSA,NC]
+
+
+# Rewrite for home.php
+RewriteRule ^home$ index.php [NC,L]
+
+# Rewrite for lesson.php?class_id=1
+RewriteRule ^lessons/([0-9a-zA-Z_-]+)$ lessons.php?class_id=$1 [NC,L]
+
+# Rewrite for lessonStudents.php?meetingID=1
+RewriteRule ^lessons/students/([0-9a-zA-Z_-]+)$ lesson_students.php?meetingID=$1 [NC,L]
+
+# Rewrite for zoom_start.php?meeting_id=2
+RewriteRule ^zoom/start/([0-9a-zA-Z_-]+)$ dbh/zoom_start.php?mid=$1 [L,QSA]
+
+# Rewrite for 1.php
+RewriteRule ^([0-9a-zA-Z_-]+)$ $1.php [NC,L]
+
+# Rewrite for dbh/1.php
+RewriteRule ^dbh/([0-9a-zA-Z_-]+)$ dbh/$1.php [NC,L]
+
+
+
+
+
+
+
+# Rewrite for attendance_overview.php?class_id=1&month=June | 2022
+RewriteRule ^classes/attendance/([0-9a-zA-Z_-]+)/([0-9a-zA-Z_-]+)/?$ attendance_overview.php?class_id=$1&attendance_month=$2 [L,QSA]

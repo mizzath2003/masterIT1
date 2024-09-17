@@ -1,0 +1,54 @@
+/* Colors */
+.textGray {
+  color: var(--textGray) !important;
+}
+.textWhite {
+  color: var(--textWhite) !important;
+}
+.textPurple {
+  color: var(--textPurple) !important;
+}
+.textBlue {
+  color: var(--textBlue) !important;
+}
+.textGreen {
+  color: var(--classGreen) !important;
+}
+.bg-blue-2 {
+  background-color: var(--bgcolor2) !important;
+}
+.textbgMain {
+  color: var(--bgcolor2) !important;
+}
+.bg-green-2 {
+  background-color: var(--btnGreen2) !important;
+  color: var(--bgMain) !important;
+}
+.bg-red-2 {
+  background-color: var(--btnRed2) !important;
+  color: var(--bgMain) !important;
+}
+.bg-yellow-2 {
+  background-color: var(--classYellow2) !important;
+  color: var(--bgMain) !important;
+}
+.inputColor {
+  background-color: #31343f !important;
+}
+
+.textOrange {
+  color: var(--btnOrange);
+}
+
+.smalltextColor {
+  color: hsl(254.29deg 9.5% 43.33%) !important;
+}
+
+.errorColor {
+  --erroColor: hsl(0deg 49.8% 51.96%) !important;
+}
+.BlueClass {
+  --classBlue: #5fa9bc !important;
+}
+
+

@@ -1,0 +1,12 @@
+[24-Nov-2023 11:38:33 Asia/Colombo] PHP Fatal error:  Uncaught Error: Object of class mysqli could not be converted to string in /home/olpluslk/public_html/masterit.lk/masterIT-manager/dbh/createlesson.php:117
+Stack trace:
+#0 {main}
+  thrown in /home/olpluslk/public_html/masterit.lk/masterIT-manager/dbh/createlesson.php on line 117
+[05-Jan-2024 01:22:00 Asia/Colombo] PHP Fatal error:  Uncaught GuzzleHttp\Exception\ClientException: Client error: `PATCH https://api.zoom.us/v2/meetings/87095809188` resulted in a `404 Not Found` response:
+{"code":3001,"message":"Meeting is not found or has expired."}
+ in /home/olpluslk/public_html/masterit.lk/masterIT-manager/dbh/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php:113
+Stack trace:
+#0 /home/olpluslk/public_html/masterit.lk/masterIT-manager/dbh/vendor/guzzlehttp/guzzle/src/Middleware.php(69): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), NULL, Array, NULL)
+#1 /home/olpluslk/public_html/masterit.lk/masterIT-manager/dbh/vendor/guzzlehttp/promises/src/Promise.php(204): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+#2 /home/olpluslk/public_html/masterit.lk/masterIT-manager/dbh/vendor/guzzlehttp/promises/src/Promise.php(153): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), NULL)
+#3 /home/olpluslk/public_html/masterit in /home/olpluslk/public_html/masterit.lk/masterIT-manager/dbh/vendor/guzzlehttp/guzzle/src/Exception/RequestException.php on line 113

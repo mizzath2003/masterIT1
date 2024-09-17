@@ -1,0 +1,55 @@
+@media (min-width: 768px) {
+  .lessonOverview h4 {
+    font-size: 2rem;
+  }
+
+  .jmt-link {
+    max-width: 250px !important;
+  }
+}
+
+.lessonOverview nav {
+  background-color: var(--inputColor) !important;
+  border-radius: 10px;
+  margin-top: 70px;
+  max-width: 430px;
+}
+
+.lessonOverview nav button,
+.lessonOverview nav a {
+  color: white !important;
+  margin: 7px;
+}
+
+.lessonOverview .nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: var(--inputColor) !important;
+  filter: brightness(1.5);
+  box-shadow: 0 0 10px 5px rgba(23, 24, 30, 0.5);
+}
+.lessonOverview .nav-pills .nav-link:hover {
+  background-color: var(--inputColor) !important;
+  filter: brightness(1.2);
+}
+
+.materials-list {
+  border-radius: 12px;
+  border: 2px solid var(--textGray);
+  padding-top: 3.7px;
+  font-size: 1.3rem !important;
+  color: var(--textGray);
+}
+
+.materials-list:hover {
+  color: hsl(193.33deg 76.83% 67.84%) !important;
+  border: 2px solid hsl(193.33deg 76.83% 67.84%);
+  background-color: hsl(202deg 26.79% 21.96%);
+}
+
+.materials-list a {
+  color: var(--textGray);
+}
+
+.materials-list a:hover {
+  color: hsl(193.33deg 76.83% 67.84%) !important;
+}

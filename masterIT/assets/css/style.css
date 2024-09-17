@@ -1,0 +1,99 @@
+/* Reusable colors */
+:root {
+  /* color */
+  --bgMain: hsl(226.67deg 12.68% 13.92%);
+  --bgcolor2: hsl(223.64deg 13.92% 15.49%);
+  --textGray: hsl(226.36deg 9.02% 52.16%);
+  --textWhite: hsl(0deg 0% 100%);
+  --textPurple: hsl(276.73deg 67.12% 71.37%);
+  --textBlue: hsl(179.05deg 81.82% 69.8%);
+  --bgcard: rgba(159, 115, 230, 0.25);
+  --inputColor: #31343f;
+  --erroColor: hsl(0deg 49.8% 51.96%);
+  --formControlBgColour: #31343f;
+
+  /* button color */
+  --btnActiveShadow: #2d73ff; /* Default active shadow color */
+  --btnOrange: hsl(14.4, 76.42%, 55.1%);
+  --btnBlue: #2d73ff;
+  --btnGreen: hsl(162.35deg 57.3% 34.9%);
+  --btnGreen2: #6cc65d;
+  --btnGray: #31343f;
+  --btnRed: #dc3545;
+  --btnRed2: #f96f6f !important;
+  --classYellow2: #c8bb31;
+
+  /* Class colors */
+  --classGreen: #59ab7d;
+  --classPurple: #9980e3;
+  --classBlue: #5fa9bc;
+  --classYellow: hsl(46.67deg 85.07% 60.59%);
+}
+/* Scroll bar*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--textGray);
+  border-radius: 20px;
+}
+
+html {
+  overflow-x: hidden;
+}
+body {
+  background-color: var(--bgMain);
+  color: var(--textWhite);
+
+  /* font-family: "Archivo", sans-serif; */
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  overflow-x: hidden;
+  padding-top:98px;
+}
+
+p {
+  font-size: 17px;
+}
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 34px;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 27px;
+  font-weight: 700;
+}
+
+h4 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.main-section {
+  min-height: 80vh;
+}
+
+.smallFont {
+  font-size: 12px;
+  color: hsl(254.29deg 9.5% 43.33%);
+}
+@font-face {
+  font-family: "MonumentExtended"; /* Name of your font family */
+  src: url("../fonts/MonumentExtended-Regular.otf") format("opentype");
+}

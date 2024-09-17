@@ -1,0 +1,42 @@
+.ClassName {
+  font-size: 0.8rem;
+  background-color: var(--bgcard);
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  padding: 6px 12px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+}
+.lesson-card-text span {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--btnGreen);
+}
+
+.lesson-content p {
+  border: 2px dotted hsl(254.29deg 9.5% 43.33%);
+  padding: 13px 10px;
+  border-radius: 7px;
+}
+.lesson-card:hover {
+  /* background: var(--bg-secondary-blue-focus); */
+  filter: brightness(1.09);
+}
+
+.lesson-card:hover img {
+  -webkit-transform: scale(1.1) rotate(3deg);
+  transform: scale(1.1) rotate(3deg);
+}
+
+.lessonImg {
+  overflow: hidden;
+  max-width: inherit;
+  max-height: inherit;
+  border-radius: inherit;
+}
+
+.lesson-card img {
+  object-fit: cover;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}

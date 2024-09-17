@@ -1,0 +1,193 @@
+/* CUSTOM BUTTON (Common to all colors)*/
+.btn-custom {
+  position: relative;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  border-radius: 0.6rem;
+  transition: all 0.15s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+.btn-custom:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 0.6rem;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  box-shadow: 0 0 1px 4px var(--btnActiveShadow);
+}
+.btn-custom:active:after {
+  box-shadow: 0 0 0 0 var(--btnActiveShadow);
+  position: absolute;
+  border-radius: 0.6rem;
+  left: 0;
+  top: 0;
+  opacity: 1;
+  transition: 0s;
+}
+.btn-custom:active {
+  margin-top: -1px;
+}
+
+/* CUSTOM ORANGE BUTTON */
+.btn-custom-orange {
+  color: var(--textWhite) !important;
+  background-color: var(--btnOrange) !important;
+}
+.btn-custom-orange:hover,
+.btn-custom-orange:active {
+  background-color: var(--btnBlue) !important;
+  --btnActiveShadow: var(--btnBlue);
+}
+
+/* CUSTOM GREEN BUTTON */
+.btn-custom-green {
+  color: var(--textWhite) !important;
+  background-color: var(--btnGreen) !important;
+}
+.btn-custom-green:hover,
+.btn-custom-green:active {
+  filter: brightness(1.1) !important;
+  background-color: var(--btnGreen) !important;
+  --btnActiveShadow: var(--btnGreen);
+}
+
+/* CUSTOM GRaY BUTTON */
+.btn-custom-gray {
+  color: var(--textWhite) !important;
+  background-color: var(--btnGray) !important;
+}
+.btn-custom-gray:hover,
+.btn-custom-gray:active {
+  background-color: var(--btnGray) !important;
+  --btnActiveShadow: var(--btnGray) !important;
+  filter: brightness(1.5) !important;
+}
+
+/* CUSTOM RED BUTTON */
+.btn-custom-red {
+  color: var(--textWhite) !important;
+  background-color: var(--btnRed) !important;
+}
+.btn-custom-red:hover,
+.btn-custom-red:active {
+  background-color: var(--btnRed) !important;
+  --btnActiveShadow: var(--btnRed) !important;
+  filter: brightness(0.9) !important;
+}
+
+/* CUSTOM OUTLINE BUTTON - ORANGE */
+/* CUSTOM ORANGE BUTTON */
+.btn-custom-outline-orange {
+  color: var(--btnOrange) !important;
+  background-color: transparent !important;
+  border-color: var(--btnOrange) !important;
+}
+.btn-custom-outline-orange:hover,
+.btn-custom-outline-orange:active {
+  color: var(--textWhite) !important;
+  background-color: var(--btnBlue) !important;
+  border: none !important;
+  --btnActiveShadow: var(--btnBlue);
+}
+
+/* CUSTOM OUTLINE BUTTON - ORANGE2 */
+/* CUSTOM ORANGE2 BUTTON */
+.btn-custom-outline-orange2 {
+  color: var(--btnOrange) !important;
+  background-color: transparent !important;
+  border-color: var(--btnOrange) !important;
+}
+.btn-custom-outline-orange2:hover,
+.btn-custom-outline-orange2:active {
+  color: var(--btnOrange) !important;
+  background-color: #e45e357a !important;
+  border: none !important;
+  --btnActiveShadow: var(--btnOrange);
+}
+
+/* CUSTOM OUTLINE BUTTON - WHITE */
+/* CUSTOM WHITE BUTTON */
+.btn-custom-outline-white {
+  color: white !important;
+  background-color: transparent !important;
+  border-color: white !important;
+}
+.btn-custom-outline-white:hover,
+.btn-custom-outline-white:active {
+  color: black !important;
+  background-color: white !important;
+  border: none !important;
+  --btnActiveShadow: white;
+}
+
+/* CUSTOM OUTLINE BUTTON - YELLOW */
+/* CUSTOM YELLOW BUTTON */
+.btn-custom-outline-yellow {
+  color: hsl(46.67deg 85.07% 60.59%) !important;
+  background-color: transparent !important;
+  border-color: hsl(46.67deg 85.07% 60.59%) !important;
+}
+.btn-custom-outline-yellow:hover,
+.btn-custom-outline-yellow:active {
+  color: hsl(46.67deg 85.07% 60.59%) !important;
+  background-color: hsla(47, 85%, 61%, 0.333) !important;
+  border: none !important;
+  --btnActiveShadow: hsl(47, 82%, 28%);
+}
+
+/* Profile button */
+.btn-custom2 {
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  border-radius: 0.6rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transform: translate3d(0, 0, 0);
+}
+.btn-custom2::after {
+  transition: all 0.5s;
+  box-shadow: 0 0 1px 4px var(--btnActiveShadow);
+  border: none !important;
+}
+.btn-custom2:active::after {
+  box-shadow: 0 0 0 0 var(--btnActiveShadow);
+  opacity: 1;
+  transition: 0s;
+  border: none !important;
+}
+.btn-custom2:active {
+  top: 1px;
+}
+
+.btn-custom-profile {
+  background-color: transparent !important;
+  border-color: var(--textWhite) !important;
+  outline: none;
+}
+.btn-custom-profile:hover,
+.btn-custom-profile:active,
+.btn-custom-profile:focus {
+  filter: brightness(108%);
+  border: none !important;
+  --btnActiveShadow: var(--textWhite);
+  outline: none;
+}

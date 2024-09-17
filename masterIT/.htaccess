@@ -1,0 +1,96 @@
+# Turn Rewrite Engine On
+RewriteEngine on
+
+RewriteBase /masterIT/
+RewriteCond %{ENV:REDIRECT_STATUS} !200
+RewriteRule (.*)\.php$ $1 [R=301,L,QSA,NC]
+
+# RewriteBase /masterit.lk/masterIT/
+# # RewriteCond %{HTTPS} !=on
+# # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# RewriteCond %{ENV:REDIRECT_STATUS} !200
+# RewriteRule (.*)\.php$ $1 [R=301,L,QSA,NC]
+
+# R=301 (permanent redirect to new URL)
+# QSA (append query string from request to substituted URL)
+# NC makes the rule non case sensitive
+# L makes this the last rule that this specific condition will match
+# $ in the regular expression makes the matching stop so that "customblah" will not work
+
+# Rewrite for home.php
+RewriteRule ^home$ index.php [NC,L]
+
+# Rewrite for classes.php
+RewriteRule ^classes$ classes.php [NC,L]
+
+# Rewrite for resources.php
+RewriteRule ^resources$ resources.php [NC,L]
+
+# Rewrite for schedule.php
+RewriteRule ^schedule$ schedule.php [NC,L]
+
+# Rewrite for schedule/past-tasks.php
+RewriteRule ^schedule/([0-9a-zA-Z_-]+)$ schedule.php?pastTask=$1 [NC,L]
+
+# Rewrite for cart.php
+RewriteRule ^cart$ cart.php [NC,L]
+
+# Rewrite for refund.php
+RewriteRule ^refund$ refund.php [NC,L]
+
+# Rewrite for privacy.php
+RewriteRule ^privacy$ privacy.php [NC,L]
+
+# Rewrite for terms.php
+RewriteRule ^terms$ terms.php [NC,L]
+
+# Rewrite for profile.php
+RewriteRule ^profile$ profile.php [NC,L]
+
+# Rewrite for registerEdit.php
+RewriteRule ^profile/edit$ registerEdit.php [NC,L]
+
+# Rewrite for profile.php?section=fees
+RewriteRule ^profile/([0-9a-zA-Z_-]+)$ profile.php?section=$1 [NC,L]
+
+# Rewrite for login.php
+RewriteRule ^login$ login.php [NC,L]
+
+# Rewrite for register.php
+RewriteRule ^register$ register.php [NC,L]
+
+# Rewrite for lesson/overview/.php
+RewriteRule ^lesson/overview/([0-9a-zA-Z_-]+)$ lessonView.php?meetingID=$1 [NC,L]
+
+# Rewrite for lessons.php
+RewriteRule ^lessons/([0-9a-zA-Z_-]+)$ lessons.php?classID=$1 [NC,L]
+
+# Rewrite for dbh/student/register.php
+RewriteRule ^student/register$ dbh/studentRegister.php [NC,L]
+
+# Rewrite for dbh/student/login.php
+RewriteRule ^student/login$ dbh/studentLogin.php [NC,L]
+
+# Rewrite for dbh/student/update.php
+RewriteRule ^student/update$ dbh/studentUpdate.php [NC,L]
+
+# Rewrite for logout.php
+RewriteRule ^logout$ logout.php [NC,L]
+
+# Rewrite for cart/add.php
+RewriteRule ^cart/add$ dbh/cartAdd.php [NC,L]
+
+# Rewrite for cart/remove.php
+RewriteRule ^cart/remove$ dbh/cartRemove.php [NC,L]
+
+# Rewrite for payment/update.php
+RewriteRule ^payment/update$ dbh/cartCheckout.php [NC,L]
+
+# Rewrite for test.php
+RewriteRule ^test$ test.php [NC,L]
+
+# Rewrite for test2.php
+RewriteRule ^test2$ test2.php [NC,L]
+
+# Rewrite for studentVerification.php
+RewriteRule ^dbh/studentVerification$ dbh/studentVerification.php [NC,L]

@@ -1,0 +1,104 @@
+CREATE TABLE `classes` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Status` VARCHAR(5) NOT NULL,
+  `Name` VARCHAR(100) NOT NULL,
+  `Image` VARCHAR(200) NOT NULL,
+  `Announcement` VARCHAR(1000),
+  `Discount` VARCHAR(15),
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `lessons` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `MeetingID` VARCHAR(30) NOT NULL,
+  `Passcode` VARCHAR(30) NOT NULL,
+  `ClassID` INT NOT NULL,
+  `Date_Created` DATETIME NOT NULL,
+  `Name` VARCHAR(100) NOT NULL,
+  `StartTime` DATETIME NOT NULL,
+  `Duration` TIME NOT NULL,
+  `Price` DECIMAL(10, 2) NOT NULL,
+  `TuteID` INT NOT NULL,
+  `RecordingLink` VARCHAR(200) NOT NULL,
+  `Status` INT NOT NULL,
+  `ImgLink` VARCHAR(500) NOT NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`ClassID`) REFERENCES `classes` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- (Other tables remain similar with improvements in data types and constraints)
+
+CREATE TABLE `tutes_request` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `studentID` INT NOT NULL,
+  `tuteID` INT NOT NULL,
+  `collectionMode` VARCHAR(50) NOT NULL,
+  `location` VARCHAR(50) NOT NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`studentID`) REFERENCES `students` (`ID`),
+  FOREIGN KEY (`tuteID`) REFERENCES `tutes` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `orders` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Date` DATETIME NOT NULL,
+  `SubTotal` DECIMAL(10, 2) NOT NULL,
+  `Discount` DECIMAL(10, 2) NOT NULL,
+  `PaymentMethod` VARCHAR(50) NOT NULL,
+  `Receipt` VARCHAR(500) NOT NULL,
+  `Status` INT NOT NULL,
+  `UserID` INT NOT NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`UserID`) REFERENCES `students` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `order_lesson` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `MeetingID` VARCHAR(30) NOT NULL,
+  `JoinUrl` VARCHAR(500) NOT NULL,
+  `Status` INT NOT NULL,
+  `UserID` INT NOT NULL,
+  `orderID` INT NOT NULL,
+  `StartTime` DATETIME NOT NULL,
+  PRIMARY KEY (`ID`),
+  FOREIGN KEY (`UserID`) REFERENCES `students` (`ID`)
+  FOREIGN KEY (`orderID`) REFERENCES `orders` (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `students` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Fname` VARCHAR(100) NOT NULL,
+  `Lname` VARCHAR(100) NOT NULL,
+  `Batch` VARCHAR(10) NOT NULL,
+  `DOB` DATE NOT NULL,
+  `Gender` VARCHAR(25) NOT NULL,
+  `School` VARCHAR(100) NOT NULL,
+  `Mobile` VARCHAR(15) NOT NULL,
+  `PMobile` VARCHAR(15) NOT NULL,
+  `District` VARCHAR(50) NOT NULL,
+  `Address` VARCHAR(200) NOT NULL,
+  `Email` VARCHAR(100) NOT NULL,
+  `PWD` VARCHAR(500) NOT NULL,
+  `Status` INT NOT NULL,
+  `EmailVerificationCode` VARCHAR(50) NOT NULL,
+  `Admin` INT DEFAULT 0,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `tutes` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(100) NOT NULL,
+  `Link` VARCHAR(1000) NOT NULL,
+  `Status` INT NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+CREATE TABLE `resources` (
+  `ID` INT NOT NULL AUTO_INCREMENT,
+  `Name` VARCHAR(256) NOT NULL,
+  `Link` VARCHAR(1000) NOT NULL,
+  `Status` INT NOT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+COMMIT;
